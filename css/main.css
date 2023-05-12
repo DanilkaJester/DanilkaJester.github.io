@@ -1,0 +1,150 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	
+    list-style: none;
+    text-decoration: none;
+}
+:root {
+	--index: calc(1vw + 1vh);
+	--color-header: #f4efec;
+	--color-text: #cdc6c3;
+	--gallery-gap: calc(var(--index) * 7.5)
+}
+@font-face {
+	font-family: raleway-c;
+	src: url(../fonts/raleway-regular.woff2);
+}
+@font-face {
+	font-family: outfit-c;
+	src: url(../fonts/outfit-regular.woff2);
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: outfit-c;
+}
+/* will-change */
+.content, .hero, .main-header, .gallery > * {
+	will-change: transform;
+}
+body {
+	background-image: url(../img/bg.jpg);
+	background-size: 50px;
+	color: #fafafa;
+	font-family: raleway-c;
+	overflow-x: hidden;
+}
+.hero {
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+	width: calc(var(--index) * 36);
+	position: absolute;
+	left: 37vw;
+	top: 22vh;
+	z-index: -1;
+}
+.main-header {
+	height: 100vh;
+}
+.container {
+	padding: 0 7vw;
+}
+.main-title {
+	font-size: calc(var(--index) * 8);
+	position: absolute;
+	width: min-content;
+	bottom: 12vh;
+	line-height: .9;
+}
+.gallery {
+	display: flex;
+	padding: calc(var(--index) * 8) 0;
+}
+.gallery > * {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.gallery__item {
+	max-width: calc(var(--index) * 21);
+	margin-bottom: var(--gallery-gap);
+	max-height: 180vh;
+	border-radius: 8px;
+}
+.gallery__left {
+	margin-top: calc(var(--gallery-gap) * 1.75);
+}
+.gallery__right .gallery__item {
+	margin: 0;
+	margin-top: var(--gallery-gap);
+}
+.text-block {
+	color: var(--color-text);
+	position: relative;
+}
+.text-block__h {
+	font-size: 2rem;
+	line-height: 2.4rem;
+	color: var(--color-header);
+	margin-bottom: 1.5rem;
+}
+.text-block__p {
+	line-height: 1.75;
+}
+
+
+
+/* border */
+.title h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: azure;
+}
+
+
+
+.list_menu a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: azure;
+    border-left: 2px solid azure;
+    padding-left:  5px ;
+    transition: all 0.3s ease;
+}
+.list_menu a:hover{
+    padding-left:  15px ;
+    border-left: 2px solid azure;
+    transition: all 0.3s ease;
+}
+.footern_menu p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: azure;
+}
+
+
+
+.list_menu{
+    margin-bottom: 50px;
+}
+.list_menu li{
+    margin: 25px 0;
+    color: azure;
+}
+.menu{
+    padding: 25vh 50px ;
+    position: fixed;
+    background: rgba(91, 89, 89, 0.5);
+    height: 100vh;
+    backdrop-filter: blur(16px);
+    border-right: 8px solid azure;
+    left: -350px;
+    transition: all 0.5s ease;
+	z-index: 2;
+}
+.menu:hover{
+    left: 0;
+    transition: all 0.3s ease;
+}
